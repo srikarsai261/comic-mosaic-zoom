@@ -74,14 +74,14 @@
   v.addOnceHandler("zoom", hideHint);
   setTimeout(hideHint, 5200);
 
-  var FIRSTS = {"superman": {"label": "Action Comics No. 1", "x": 0.7333333333333333, "y": 0.4083333333333333, "w": 0.03333333333333333, "h": 0.05}, "batman": {"label": "Detective Comics No. 27", "x": 0.8083333333333333, "y": 1.1416666666666666, "w": 0.03333333333333333, "h": 0.05}, "doom": {"label": "Fantastic Four No. 5", "x": 0.19166666666666668, "y": 0.9083333333333333, "w": 0.03333333333333333, "h": 0.05}};
+  var FIRSTS = {"superman": {"label": "Action Comics No. 1", "x": 0.8291666666666667, "y": 0.5541666666666667, "w": 0.008333333333333333, "h": 0.008333333333333333}, "batman": {"label": "Detective Comics No. 27", "x": 0.3375, "y": 0.4375, "w": 0.008333333333333333, "h": 0.008333333333333333}, "doom": {"label": "Fantastic Four No. 5", "x": 0.5375, "y": 0.07083333333333333, "w": 0.008333333333333333, "h": 0.008333333333333333}};
   document.getElementById("finds").addEventListener("click", function(e){
     var b = e.target.closest("button"); if(!b) return;
     var f = FIRSTS[b.dataset.k]; if(!f) return;
     hideHint();
     [].forEach.call(document.querySelectorAll("#finds button"), function(x){ x.classList.remove("on"); });
     b.classList.add("on");
-    var pad = f.w * 0.55;
+    var pad = f.w * 3.2;
     v.viewport.fitBounds(new OpenSeadragon.Rect(f.x - f.w/2 - pad, f.y - f.h/2 - pad,
                                                 f.w + pad*2, f.h + pad*2), false);
   });
