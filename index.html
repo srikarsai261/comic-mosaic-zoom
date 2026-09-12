@@ -81,7 +81,7 @@
     hideHint();
     [].forEach.call(document.querySelectorAll("#finds button"), function(x){ x.classList.remove("on"); });
     b.classList.add("on");
-    var pad = f.w * 1.6;
+    var pad = f.w * 0.55;
     v.viewport.fitBounds(new OpenSeadragon.Rect(f.x - f.w/2 - pad, f.y - f.h/2 - pad,
                                                 f.w + pad*2, f.h + pad*2), false);
   });
